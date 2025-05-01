@@ -1,8 +1,8 @@
 package Land;
 
-import java.util.*;
-import java.text.SimpleDateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class LandRegistry {
     private static Scanner scanner = new Scanner(System.in);
@@ -104,7 +104,7 @@ public class LandRegistry {
                 try {
                     String dateStr = getInput("Enter registration date (yyyy-MM-dd): ", false);
                     while (!dateStr.matches("\\d{4}-\\d{2}-\\d{2}")) {
-                        System.out.println("Date must be in yyyy-MM-dd format.");
+                        System.out.println("Date must be in yyyy-MM-dd format(Month and Day must be two digits).");
                         dateStr = getInput("Enter registration date (yyyy-MM-dd): ", false);
                     }
                     regDate = dateFormat.parse(dateStr);
